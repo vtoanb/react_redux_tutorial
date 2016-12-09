@@ -1,13 +1,14 @@
 import React from 'react';
+import VideoListItem from './video_list_item';
 
 const VideoList = (props) => {
+  const videoItems = props.videos.map( video => {
+    return <VideoListItem key={video.etag} video={video} />
+  });
   return(
-    <div>
-      <h1>We have {props.videos.length} videos</h1>
-      <ul className="col-md-4">
-        {props.videos.length}
+      <ul className="col-md-4 list-group">
+        {videoItems}
       </ul>
-    </div>
   )
 }
 
