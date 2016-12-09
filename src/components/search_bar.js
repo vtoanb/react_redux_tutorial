@@ -10,8 +10,7 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div className="col-md-8">
-        <br/>
+      <div>
         <input
           className="form-control"
           value = {this.state.term}
